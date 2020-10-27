@@ -3,14 +3,16 @@
 #/ This program was written by Muhammad Irham Luthfi. /#
 #/ Intended for educational use.                      /#
 #/ No rights reserved.                                /#
-#/ Written in Python 3.x                              /#
 #//////////////////////////////////////////////////////#
 
-# For python 2.x
-# from __future__ import division
+def is_leap(year):
+    leap = False
+    
+    if year%400 == 0 or (year%4 == 0 and year%100 != 0):
+        leap = True
+    
+    return leap
 
-a = int(input())
-b = int(input())
-
-print(a//b)
-print(a/b)
+# Use raw_input() for 2.x
+year = int(input())
+print is_leap(year)
